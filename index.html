@@ -26,17 +26,45 @@
       cursor: pointer;          
     }
 
-    button:hover {
-      background-color: #45a049;
+    .button-container {
+      display: flex;
+      flex-direction: column; 
+      gap: 15px;              
+      align-items: center;
+    }
+
+    .green-button {
+      background-color: #4CAF50; 
+      color: white;              
+    }
+
+    .green-button:hover {
+      background-color: #45a049; 
+    }
+
+    .red-button {
+      background-color: #f44336; 
+      color: white;             
+    }
+
+    .red-button:hover {
+      background-color: #d32f2f;
     }
   </style>
 </head>
 <body>
-  <button onclick="redirect()">Click me to Redirect</button>
+  <div class="button-container">
+    <button class="green-button" onclick="redirectToGreen()">Click me to Redirect (Green)</button>
+    <button class="red-button" onclick="redirectToRed()">Click me to Redirect (Red)</button>
+  </div>
 
   <script>
-    function redirect() {
+    function redirectToGreen() {
       window.location.href = "https://google.com";
+    }
+
+    function redirectToRed() {
+      window.location.href = "https://github.com";
     }
   </script>
 </body>
